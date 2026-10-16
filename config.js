@@ -10,7 +10,7 @@ window.SITE_CONFIG = {
   // --- Brand ---
   companyName: "MV Home Automation",                     // e.g. "Aether Homes" or your real name
   tagline: "Smart Living, Simply Delivered",
-  logoText: "AETHER",                              // short text logo (or replace with image later)
+  logoText: "MV home Automation",                              // short text logo (or replace with image later)
 
   // --- Contact (CRITICAL for lead gen) ---
   whatsappNumber: "919626268609",                  // Full international format without + or spaces, e.g. 919876543210
