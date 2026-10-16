@@ -8,14 +8,14 @@
 
 window.SITE_CONFIG = {
   // --- Brand ---
-  companyName: "Aether Homes",                     // e.g. "Aether Homes" or your real name
+  companyName: "MV Home Automation",                     // e.g. "Aether Homes" or your real name
   tagline: "Smart Living, Simply Delivered",
   logoText: "AETHER",                              // short text logo (or replace with image later)
 
   // --- Contact (CRITICAL for lead gen) ---
-  whatsappNumber: "91XXXXXXXXXX",                  // Full international format without + or spaces, e.g. 919876543210
-  email: "hello@yourdomain.com",
-  phoneDisplay: "+91 XXXXX XXXXX",                 // Human-readable phone
+  whatsappNumber: "919626268609",                  // Full international format without + or spaces, e.g. 919876543210
+  email: "mvhomeautomationpvtlmt@gmail.com",
+  phoneDisplay: "+91 9789289119",                 // Human-readable phone
   address: "Madurai • Coimbatore • Chennai, Tamil Nadu",
 
   // --- Service Areas ---
