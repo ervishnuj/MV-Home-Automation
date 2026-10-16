@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Automation in Madurai, Coimbatore & Chennai | Smart Home Solutions | Aether Homes</title>
+  <meta name="description" content="Professional home automation installation for modern homes, villas and apartments in Tamil Nadu. Smart lighting, motorized curtains, security sensors, smart switches. Free consultation in Madurai, Coimbatore & Chennai." />
+  <meta name="keywords" content="Home Automation Madurai, Smart Home Solutions Coimbatore, Home Automation Installation Chennai, Smart Lighting, Curtain Automation, Smart Switches, Home Automation for Villas, Home Automation Interior Designers" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.yourdomain.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Smart Home Automation | Madurai, Coimbatore & Chennai" />
+  <meta property="og:description" content="Make your home smarter, safer & more comfortable. Custom automation for lighting, curtains, security and more." />
+  <meta property="og:url" content="https://www.yourdomain.com/" />
+  <meta property="og:locale" content="en_IN" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              950: '#0a0f1a',
+              900: '#0f172a',
+              800: '#1e293b',
+              700: '#334155',
+              600: '#475569',
+            },
+            gold: {
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Aether Homes",
+    "description": "Professional home automation solutions for homes, villas and apartments in Tamil Nadu.",
+    "url": "https://www.yourdomain.com",
+    "areaServed": [
+      { "@type": "City", "name": "Madurai" },
+      { "@type": "City", "name": "Coimbatore" },
+      { "@type": "City", "name": "Chennai" }
+    ],
+    "serviceType": ["Home Automation", "Smart Lighting", "Motorized Curtains", "Smart Security", "Smart Switches"],
+    "priceRange": "$$"
+  }
+  </script>
+</head>
+<body class="bg-navy-950 text-slate-200 antialiased">
+
+  <!-- ========== HEADER ========== -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-navy-950/90 backdrop-blur-md border-b border-navy-800/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-18">
+        <!-- Logo -->
+        <a href="/" class="flex items-center gap-2 group">
+          <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-gold-500 to-gold-600 flex items-center justify-center text-navy-950 font-bold text-sm">AH</div>
+          <span class="font-bold text-lg tracking-tight text-white group-hover:text-gold-400 transition" data-config="logoText">AETHER</span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
+          <a href="#services" class="text-slate-300 hover:text-gold-400 transition">Services</a>
+          <a href="#solutions" class="text-slate-300 hover:text-gold-400 transition">Solutions</a>
+          <a href="#process" class="text-slate-300 hover:text-gold-400 transition">Process</a>
+          <a href="#for-professionals" class="text-slate-300 hover:text-gold-400 transition">For Professionals</a>
+          <a href="#faq" class="text-slate-300 hover:text-gold-400 transition">FAQ</a>
+          <a href="#contact" class="text-slate-300 hover:text-gold-400 transition">Contact</a>
+        </nav>
+
+        <!-- CTA + Mobile -->
+        <div class="flex items-center gap-3">
+          <a href="#consultation" class="btn-primary text-sm py-2.5 px-4 hidden sm:inline-flex">
+            Free Consultation
+          </a>
+          <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-slate-300 hover:bg-navy-800" aria-label="Open menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu fixed inset-y-0 right-0 w-72 bg-navy-900 border-l border-navy-700 z-[60] p-6 flex flex-col">
+    <div class="flex justify-between items-center mb-8">
+      <span class="font-bold text-white" data-config="logoText">AETHER</span>
+      <button id="mobile-menu-close" class="p-2 text-slate-400 hover:text-white" aria-label="Close menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <nav class="flex flex-col gap-4 text-base font-medium">
+      <a href="#services" class="text-slate-200 hover:text-gold-400 py-2">Services</a>
+      <a href="#solutions" class="text-slate-200 hover:text-gold-400 py-2">Solutions</a>
+      <a href="#process" class="text-slate-200 hover:text-gold-400 py-2">Process</a>
+      <a href="#for-professionals" class="text-slate-200 hover:text-gold-400 py-2">For Professionals</a>
+      <a href="#faq" class="text-slate-200 hover:text-gold-400 py-2">FAQ</a>
+      <a href="#contact" class="text-slate-200 hover:text-gold-400 py-2">Contact</a>
+      <a href="#consultation" class="btn-primary mt-4 justify-center">Get Free Consultation</a>
+      <a data-wa="general" class="btn-secondary mt-2 justify-center">Chat on WhatsApp</a>
+    </nav>
+  </div>
+
+  <!-- ========== HERO ========== -->
+  <section class="relative min-h-[92vh] flex items-center pt-16 overflow-hidden">
+    <!-- Background -->
+    <div class="absolute inset-0">
+      <img
+        src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1920&q=80"
+        alt="Modern Indian home living room with smart lighting"
+        class="w-full h-full object-cover"
+        width="1920" height="1080"
+        fetchpriority="high"
+      />
+      <div class="absolute inset-0 hero-overlay"></div>
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <div class="max-w-3xl">
+        <p class="text-gold-400 font-semibold text-sm tracking-widest uppercase mb-4 animate-fade-up">Tamil Nadu • Madurai • Coimbatore • Chennai</p>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6 animate-fade-up" style="animation-delay:0.1s">
+          Make Your Home<br class="hidden sm:block" />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-gold-600">Smarter, Safer & More Comfortable.</span>
+        </h1>
+        <p class="text-lg sm:text-xl text-slate-300 mb-8 max-w-2xl leading-relaxed animate-fade-up" style="animation-delay:0.2s">
+          Smart home automation solutions for modern homes, apartments and villas. Control lighting, fans, curtains and compatible devices with convenient, customized automation.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 animate-fade-up" style="animation-delay:0.3s">
+          <a href="#consultation" class="btn-primary text-base">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            Get a Free Consultation
+          </a>
+          <a data-wa="general" class="btn-secondary text-base">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967 conf-.247-.1-.428-.149-.61.15-.181.297-.703.966-.86 1.165-.157.2-.314.223-.583.075-.269-.149-1.137-.42-2.166-1.34-.801-.713-1.341-1.593-1.498-1.862-.157-.269-.017-.414.118-.548.121-.12.269-.314.403-.472.134-.157.179-.269.268-.448.09-.179.045-.336-.022-.485-.067-.149-.61-1.47-.836-2.013-.22-.53-.443-.458-.61-.467-.157-.009-.336-.011-.515-.011-.179 0-.47.067-.716.336-.246.268-.936.914-.936 2.23 0 1.315.958 2.585 1.092 2.763.134.179 1.88 2.87 4.554 4.025.636.275 1.133.44 1.52.563.639.204 1.22.175 1.68.106.512-.076 1.758-.718 2.006-1.412.248-.694.248-1.289.173-1.412-.074-.123-.269-.198-.566-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.12.55 4.113 1.513 5.85L.057 23.5a.75.75 0 00.92.92l5.65-1.456A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.72 9.72 0 01-4.95-1.35l-.355-.21-3.72.96.99-3.63-.23-.37A9.72 9.72 0 012.25 12 9.75 9.75 0 0112 2.25 9.75 9.75 0 0121.75 12 9.75 9.75 0 0112 21.75z"/></svg>
+            Chat on WhatsApp
+          </a>
+        </div>
+        <p class="mt-6 text-sm text-slate-400 animate-fade-up" style="animation-delay:0.4s">
+          Serving homeowners, villa owners, architects, interior designers & builders across Tamil Nadu.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== KEY BENEFITS ========== -->
+  <section class="section-pad bg-navy-900/50 border-y border-navy-800/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-3">Why Homeowners Choose Smart Automation</h2>
+        <p class="text-slate-400 max-w-2xl mx-auto">Practical benefits that make daily living more convenient, comfortable and secure.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="card p-6 text-center">
+          <div class="icon-circle mx-auto mb-4">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          </div>
+          <h3 class="font-semibold text-white text-lg mb-2">Convenience</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Control lights, fans, curtains and scenes from your phone or with a single touch — even when you are away.</p>
+        </div>
+        <div class="card p-6 text-center">
+          <div class="icon-circle mx-auto mb-4">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          </div>
+          <h3 class="font-semibold text-white text-lg mb-2">Comfort</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Create the right ambience for every moment — movie night, dinner, or winding down after a long day.</p>
+        </div>
+        <div class="card p-6 text-center">
+          <div class="icon-circle mx-auto mb-4">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3 class="font-semibold text-white text-lg mb-2">Security</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Door sensors, motion alerts and smart locks help you stay informed about activity at home.</p>
+        </div>
+        <div class="card p-6 text-center">
+          <div class="icon-circle mx-auto mb-4">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h3 class="font-semibold text-white text-lg mb-2">Energy Awareness</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">Monitor usage patterns and schedule devices so you can make informed decisions about consumption.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== POPULAR SOLUTIONS / SERVICES ========== -->
+  <section id="services" class="section-pad">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-3 gold-underline">Popular Home Automation Solutions</h2>
+        <p class="text-slate-400 max-w-2xl mx-auto mt-6">From single-room upgrades to whole-home systems — we design around your needs and existing wiring.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- 1. Smart Lighting -->
+        <article class="card p-6 flex flex-col">
+          <div class="icon-circle mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">Smart Lighting Automation</h3>
+          <p class="text-slate-400 text-sm mb-3"><strong class="text-slate-300">Problem:</strong> Manually switching lights room by room is inconvenient, especially in multi-level homes.</p>
+          <p class="text-slate-400 text-sm mb-3"><strong class="text-slate-300">Solution:</strong> App or voice-controlled lighting with dimming, scheduling and scene presets where hardware supports it.</p>
+          <ul class="text-sm text-slate-400 space-y-1 mb-4 flex-grow">
+            <li>• Dimable & colour-temperature options (compatible fixtures)</li>
+            <li>• Scheduled on/off and presence-based scenes</li>
+            <li>• Works with many existing LED drivers / switches</li>
+          </ul>
+          <p class="text-xs text-slate-500 mb-4">Installation depends on existing wiring and chosen modules. Not every brand or fixture is supported.</p>
+          <a data-wa="lighting" class="btn-primary text-sm w-full justify-center mt-auto">Get a Quote on WhatsApp</a>
+        </article>
+
+        <!-- 2. Smart Switches & Fans -->
+        <article class="card p-6 flex flex-col">
+          <div class="icon-circle mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">Smart Switches & Fan Control</h3>
+          <p class="text-slate-400 text-sm mb-3"><strong class="text-slate-300">Problem:</strong> Reaching physical switches or adjusting fan speed repeatedly is tedious.</p>
+          <p class="text-slate-400 text-sm mb-3"><strong class="text-slate-300">Solution:</strong> Retrofit-friendly smart switches and fan regulators controllable via app, touch or voice (where compatible).</p>
+          <ul class="text-sm text-slate-400 space-y-1 mb-4 flex-grow">
+            <li>• Replace existing modular switches in many cases</li>
+            <li>• Speed control for ceiling fans</li>
+            <li>• Local touch + remote control</li>
+          </ul>
+          <p class="text-xs text-slate-500 mb-4">Suitability depends on switchboard depth, neutral wire availability and load type. Site assessment recommended.</p>
+          <a data-wa="switches" class="btn-primary text-sm w-full justify-center mt-auto">Get a Quote on WhatsApp</a>
+        </article>
+
+        <!-- 3. Motorized Curtains -->
+        <article class="card p-6 flex flex-col">
+          <div class="icon-circle mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">Motorized Curtain Automation</h3>
+          <p class="text-slate-400 text-sm mb-3"><strong class="text-slate-300">Problem:</strong> Heavy curtains and large windows are hard to open/close daily; natural light control is inconsistent.</p>
+          <p class="text-slate-400 text-sm mb-3"><strong class="text-slate-300">Solution:</strong> Quiet motorised tracks or rods integrated with schedules and scenes.</p>
+          <ul class="text-sm text-slate-400 space-y-1 mb-4 flex-grow">
+            <li>• Open/close by schedule or single command</li>
+            <li>• Suitable for living rooms, bedrooms & large windows</li>
+            <li>• Can pair with lighting scenes</li>
+          </ul>
+          <p class="text-xs text-slate-500 mb-4">Requires suitable mounting space and power. Curtain weight and track length affect motor selection.</p>
+          <a data-wa="curtains" class="btn-primary text-sm w-full justify-center mt-auto">Get a Quote on WhatsApp</a>
+        </article>
+
+        <!-- 4. Smart Locks & Doorbells -->
+        <article class="card p-6 flex flex-col">
+          <div class="icon-circle mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">Smart Door Locks & Video Doorbells</h3>
+          <p class="text-slate-400 text-sm mb-3"><strong class="text-slate-300">Problem:</strong> Managing keys, guest access and knowing who is at the door is inconvenient.</p>
+          <p class="text-slate-400 text-sm mb-3"><strong class="text-slate-300">Solution:</strong> Keyless entry options and video doorbells that send alerts to your phone.</p>
+          <ul class="text-sm text-slate-400 space-y-1 mb-4 flex-grow">
+            <li>• Temporary access codes for guests or staff</li>
+            <li>• Live video & motion alerts (compatible models)</li>
+            <li>• Integration with selected security systems</li>
+          </ul>
+          <p class="text-xs text-slate-500 mb-4">Door thickness, material and existing lock type must be checked. Internet reliability affects remote features.</p>
+          <a data-wa="locks" class="btn-primary text-sm w-full justify-center mt-auto">Get a Quote on WhatsApp</a>
+        </article>
+
+        <!-- 5. Security Sensors -->
+        <article class="card p-6 flex flex-col">
+          <div class="icon-circle mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">Home Security Sensors & Alerts</h3>
+          <p class="text-slate-400 text-sm mb-3"><strong class="text-slate-300">Problem:</strong> Not knowing about unexpected activity while away or at night creates anxiety.</p>
+          <p class="text-slate-400 text-sm mb-3"><strong class="text-slate-300">Solution:</strong> Door/window sensors, motion detectors and instant mobile alerts for selected events.</p>
+          <ul class="text-sm text-slate-400 space-y-1 mb-4 flex-grow">
+            <li>• Real-time notifications on compatible apps</li>
+            <li>• Can trigger lights or sirens (where supported)</li>
+            <li>• Expandable zone by zone</li>
+          </ul>
+          <p class="text-xs text-slate-500 mb-4">Alert reliability depends on network connectivity and battery status of sensors. Professional placement improves coverage.</p>
+          <a data-wa="security" class="btn-primary text-sm w-full justify-center mt-auto">Get a Quote on WhatsApp</a>
+        </article>
+
+        <!-- 6. AC / HVAC -->
+        <article class="card p-6 flex flex-col">
+          <div class="icon-circle mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">AC & HVAC Control</h3>
+          <p class="text-slate-400 text-sm mb-3"><strong class="text-slate-300">Problem:</strong> Leaving AC on by mistake or adjusting temperature from another room is common.</p>
+          <p class="text-slate-400 text-sm mb-3"><strong class="text-slate-300">Solution:</strong> Compatible IR or smart controllers that let you schedule and control selected AC units remotely.</p>
+          <ul class="text-sm text-slate-400 space-y-1 mb-4 flex-grow">
+            <li>• On/off and temperature scheduling</li>
+            <li>• Works with many IR-based split ACs</li>
+            <li>• Can be part of “Away” or “Welcome” scenes</li>
+          </ul>
+          <p class="text-xs text-slate-500 mb-4">Not every AC brand or model is supported. Compatibility check required before installation.</p>
+          <a data-wa="hvac" class="btn-primary text-sm w-full justify-center mt-auto">Get a Quote on WhatsApp</a>
+        </article>
+
+        <!-- 7. Smart Scenes -->
+        <article class="card p-6 flex flex-col">
+          <div class="icon-circle mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"/></svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">Smart Scenes</h3>
+          <p class="text-slate-400 text-sm mb-3"><strong class="text-slate-300">Problem:</strong> Adjusting multiple devices for different activities takes time and multiple steps.</p>
+          <p class="text-slate-400 text-sm mb-3"><strong class="text-slate-300">Solution:</strong> One-tap or scheduled scenes such as Movie Mode, Night Mode and Away Mode.</p>
+          <ul class="text-sm text-slate-400 space-y-1 mb-4 flex-grow">
+            <li>• Movie Mode — dim lights, close curtains</li>
+            <li>• Night Mode — pathway lights, secure doors</li>
+            <li>• Away Mode — simulate presence, arm sensors</li>
+          </ul>
+          <p class="text-xs text-slate-500 mb-4">Scenes are configured based on the devices installed in your home. Complexity grows with system size.</p>
+          <a data-wa="scenes" class="btn-primary text-sm w-full justify-center mt-auto">Get a Quote on WhatsApp</a>
+        </article>
+
+        <!-- 8. Energy Monitoring -->
+        <article class="card p-6 flex flex-col">
+          <div class="icon-circle mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">Energy Monitoring</h3>
+          <p class="text-slate-400 text-sm mb-3"><strong class="text-slate-300">Problem:</strong> High electricity bills without clear visibility into which loads contribute most.</p>
+          <p class="text-slate-400 text-sm mb-3"><strong class="text-slate-300">Solution:</strong> Compatible energy monitors and smart plugs that report usage patterns to an app.</p>
+          <ul class="text-sm text-slate-400 space-y-1 mb-4 flex-grow">
+            <li>• Real-time and historical consumption data</li>
+            <li>• Identify high-usage appliances</li>
+            <li>• Helps informed decisions on scheduling</li>
+          </ul>
+          <p class="text-xs text-slate-500 mb-4">We do not claim guaranteed savings. Results depend on your habits and the devices monitored.</p>
+          <a data-wa="energy" class="btn-primary text-sm w-full justify-center mt-auto">Get a Quote on WhatsApp</a>
+        </article>
+
+        <!-- 9. Custom Integration -->
+        <article class="card p-6 flex flex-col">
+          <div class="icon-circle mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/></svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">Custom Home Automation Integration</h3>
+          <p class="text-slate-400 text-sm mb-3"><strong class="text-slate-300">Problem:</strong> Off-the-shelf kits may not fit unique layouts, mixed brands or multi-villa projects.</p>
+          <p class="text-slate-400 text-sm mb-3"><strong class="text-slate-300">Solution:</strong> Tailored design combining selected controllers, sensors and interfaces around your requirements.</p>
+          <ul class="text-sm text-slate-400 space-y-1 mb-4 flex-grow">
+            <li>• Multi-room / multi-floor coordination</li>
+            <li>• Coordination with architects & designers</li>
+            <li>• Phased implementation possible</li>
+          </ul>
+          <p class="text-xs text-slate-500 mb-4">Every project is assessed individually. We only recommend solutions we can reliably support.</p>
+          <a data-wa="custom" class="btn-primary text-sm w-full justify-center mt-auto">Get a Quote on WhatsApp</a>
+        </article>
+
+        <!-- 10. Installation & Support -->
+        <article class="card p-6 flex flex-col">
+          <div class="icon-circle mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">Installation, Troubleshooting & Maintenance</h3>
+          <p class="text-slate-400 text-sm mb-3"><strong class="text-slate-300">Problem:</strong> DIY setups often fail or lack proper handover and ongoing support.</p>
+          <p class="text-slate-400 text-sm mb-3"><strong class="text-slate-300">Solution:</strong> Professional installation, testing, user training and optional maintenance visits.</p>
+          <ul class="text-sm text-slate-400 space-y-1 mb-4 flex-grow">
+            <li>• Structured site survey and proposal</li>
+            <li>• Clean installation & documentation</li>
+            <li>• Post-handover support options</li>
+          </ul>
+          <p class="text-xs text-slate-500 mb-4">Warranty and support terms depend on products used and are confirmed in writing before work begins.</p>
+          <a data-wa="support" class="btn-primary text-sm w-full justify-center mt-auto">Get a Quote on WhatsApp</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SOLUTIONS FOR NEW vs EXISTING ========== -->
+  <section id="solutions" class="section-pad bg-navy-900/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-3">Solutions for Every Stage of Your Home</h2>
+        <p class="text-slate-400 max-w-2xl mx-auto">Whether you are building new or upgrading an existing space, we plan around your timeline and wiring.</p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-8">
+        <!-- New Home -->
+        <div class="card p-8">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="icon-circle">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+            </div>
+            <h3 class="text-2xl font-bold text-white">New Home Construction</h3>
+          </div>
+          <p class="text-slate-300 mb-4 leading-relaxed">
+            Planning automation during the electrical wiring and construction phase allows cleaner installations, better cable routing and future-ready infrastructure. Many decisions about switch locations, neutral wires and conduit paths are easier at this stage.
+          </p>
+          <ul class="text-sm text-slate-400 space-y-2 mb-6">
+            <li class="flex gap-2"><span class="text-gold-400">✓</span> Coordinate with your architect and electrical contractor</li>
+            <li class="flex gap-2"><span class="text-gold-400">✓</span> Pre-wire for motors, sensors and control panels where useful</li>
+            <li class="flex gap-2"><span class="text-gold-400">✓</span> Avoid later demolition or surface trunking</li>
+            <li class="flex gap-2"><span class="text-gold-400">✓</span> Phased handover as interiors progress</li>
+          </ul>
+          <a data-wa="newHome" class="btn-primary text-sm">Discuss New Home Project</a>
+        </div>
+
+        <!-- Existing Home -->
+        <div class="card p-8">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="icon-circle">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            </div>
+            <h3 class="text-2xl font-bold text-white">Existing Homes & Retrofits</h3>
+          </div>
+          <p class="text-slate-300 mb-4 leading-relaxed">
+            Many homes can be upgraded with modular smart switches, plug-in controllers and wireless sensors. Success depends on existing wiring, switchboard space, neutral availability and the devices you wish to control.
+          </p>
+          <ul class="text-sm text-slate-400 space-y-2 mb-6">
+            <li class="flex gap-2"><span class="text-gold-400">✓</span> Site survey to assess feasibility</li>
+            <li class="flex gap-2"><span class="text-gold-400">✓</span> Prefer solutions that minimise wall cutting</li>
+            <li class="flex gap-2"><span class="text-gold-400">✓</span> Start with high-impact rooms if budget is limited</li>
+            <li class="flex gap-2"><span class="text-gold-400">✓</span> Clear explanation of what is and isn’t possible</li>
+          </ul>
+          <a data-wa="existing" class="btn-primary text-sm">Discuss Retrofit Options</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== LUXURY VILLAS & APARTMENTS ========== -->
+  <section class="section-pad">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-gold-400 font-semibold text-sm tracking-wide uppercase mb-2">Premium Living</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Luxury Villas & Apartments</h2>
+          <p class="text-slate-300 mb-6 leading-relaxed">
+            For larger homes and high-end apartments we design coordinated lighting scenes, motorised curtains, centralised control interfaces and compatible security layers that feel seamless rather than gadget-heavy.
+          </p>
+          <ul class="space-y-3 text-slate-300 mb-8">
+            <li class="flex gap-3"><span class="text-gold-400 font-bold">01</span> Multi-room lighting and curtain scenes</li>
+            <li class="flex gap-3"><span class="text-gold-400 font-bold">02</span> Centralised touch or app control where preferred</li>
+            <li class="flex gap-3"><span class="text-gold-400 font-bold">03</span> Guest and family access profiles for locks</li>
+            <li class="flex gap-3"><span class="text-gold-400 font-bold">04</span> Coordination with interior designers on aesthetics</li>
+          </ul>
+          <a data-wa="quote" class="btn-primary">Request Villa / Apartment Consultation</a>
+        </div>
+        <div class="relative rounded-2xl overflow-hidden aspect-[4/3]">
+          <img
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80"
+            alt="Luxury modern villa exterior and living space"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-navy-950/70 to-transparent"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOR PROFESSIONALS ========== -->
+  <section id="for-professionals" class="section-pad bg-navy-900/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-3">For Designers, Architects & Builders</h2>
+        <p class="text-slate-400 max-w-2xl mx-auto">We collaborate as a technical partner so your projects deliver reliable automation without last-minute surprises.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Interior Designers -->
+        <div class="card p-6">
+          <h3 class="text-xl font-semibold text-white mb-3">Interior Designers</h3>
+          <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+            Partner with us for product selection, technical planning, switch and fixture coordination, and clean installation that respects your design intent.
+          </p>
+          <ul class="text-sm text-slate-400 space-y-1 mb-6">
+            <li>• Technical drawings & BOQ support</li>
+            <li>• Aesthetic-friendly device choices</li>
+            <li>• Site coordination during interiors</li>
+          </ul>
+          <a data-wa="designer" class="btn-secondary text-sm w-full justify-center">Explore Partnership</a>
+        </div>
+
+        <!-- Architects -->
+        <div class="card p-6">
+          <h3 class="text-xl font-semibold text-white mb-3">Architects</h3>
+          <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+            Early involvement helps embed conduit paths, panel locations and control strategies into the architectural and electrical design.
+          </p>
+          <ul class="text-sm text-slate-400 space-y-1 mb-6">
+            <li>• Pre-construction planning inputs</li>
+            <li>• Integration with lighting design</li>
+            <li>• Documentation for clients</li>
+          </ul>
+          <a data-wa="architect" class="btn-secondary text-sm w-full justify-center">Discuss Collaboration</a>
+        </div>
+
+        <!-- Builders & Contractors -->
+        <div class="card p-6">
+          <h3 class="text-xl font-semibold text-white mb-3">Builders & Electrical Contractors</h3>
+          <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+            Referral partnerships and project-based coordination so your clients receive professional automation without you carrying the technical risk.
+          </p>
+          <ul class="text-sm text-slate-400 space-y-1 mb-6">
+            <li>• Clear scope and pricing discussions</li>
+            <li>• Technical coordination on site</li>
+            <li>• Transparent handover process</li>
+          </ul>
+          <a data-wa="builder" class="btn-secondary text-sm w-full justify-center">Talk Partnership</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROCESS ========== -->
+  <section id="process" class="section-pad">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-3">Our Process</h2>
+        <p class="text-slate-400 max-w-2xl mx-auto">Clear steps from first conversation to a working system you understand and can use daily.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
+        <div class="text-center">
+          <div class="w-14 h-14 mx-auto rounded-full bg-gold-500/15 border border-gold-500/30 flex items-center justify-center text-gold-400 font-bold text-lg mb-3">1</div>
+          <h4 class="font-semibold text-white mb-1">Consultation</h4>
+          <p class="text-xs text-slate-400">Understand needs, rooms and priorities</p>
+        </div>
+        <div class="text-center">
+          <div class="w-14 h-14 mx-auto rounded-full bg-gold-500/15 border border-gold-500/30 flex items-center justify-center text-gold-400 font-bold text-lg mb-3">2</div>
+          <h4 class="font-semibold text-white mb-1">Site Survey</h4>
+          <p class="text-xs text-slate-400">Assess wiring, switchboards and feasibility</p>
+        </div>
+        <div class="text-center">
+          <div class="w-14 h-14 mx-auto rounded-full bg-gold-500/15 border border-gold-500/30 flex items-center justify-center text-gold-400 font-bold text-lg mb-3">3</div>
+          <h4 class="font-semibold text-white mb-1">Proposal</h4>
+          <p class="text-xs text-slate-400">Clear scope, products and pricing</p>
+        </div>
+        <div class="text-center">
+          <div class="w-14 h-14 mx-auto rounded-full bg-gold-500/15 border border-gold-500/30 flex items-center justify-center text-gold-400 font-bold text-lg mb-3">4</div>
+          <h4 class="font-semibold text-white mb-1">Installation</h4>
+          <p class="text-xs text-slate-400">Professional fitting and configuration</p>
+        </div>
+        <div class="text-center">
+          <div class="w-14 h-14 mx-auto rounded-full bg-gold-500/15 border border-gold-500/30 flex items-center justify-center text-gold-400 font-bold text-lg mb-3">5</div>
+          <h4 class="font-semibold text-white mb-1">Testing</h4>
+          <p class="text-xs text-slate-400">Verify every device and scene</p>
+        </div>
+        <div class="text-center">
+          <div class="w-14 h-14 mx-auto rounded-full bg-gold-500/15 border border-gold-500/30 flex items-center justify-center text-gold-400 font-bold text-lg mb-3">6</div>
+          <h4 class="font-semibold text-white mb-1">Handover</h4>
+          <p class="text-xs text-slate-400">Training and documentation</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WHY CHOOSE US ========== -->
+  <section class="section-pad bg-navy-900/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-3">Why Work With Us</h2>
+        <p class="text-slate-400 max-w-2xl mx-auto">Practical reasons that matter when you are investing in your home.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="trust-badge">
+          <h4 class="font-semibold text-white mb-2">Honest Assessment</h4>
+          <p class="text-sm text-slate-400">We tell you what is realistically possible with your wiring and budget — no overselling.</p>
+        </div>
+        <div class="trust-badge">
+          <h4 class="font-semibold text-white mb-2">Local Focus</h4>
+          <p class="text-sm text-slate-400">Serving Madurai, Coimbatore, Chennai and nearby cities with on-ground support.</p>
+        </div>
+        <div class="trust-badge">
+          <h4 class="font-semibold text-white mb-2">Clean Installation</h4>
+          <p class="text-sm text-slate-400">Attention to finish quality so automation does not look like an afterthought.</p>
+        </div>
+        <div class="trust-badge">
+          <h4 class="font-semibold text-white mb-2">Clear Documentation</h4>
+          <p class="text-sm text-slate-400">You receive a written proposal, scope and handover notes you can refer to later.</p>
+        </div>
+      </div>
+      <p class="text-center text-sm text-slate-500 mt-8 max-w-2xl mx-auto">
+        We do not invent project counts, certifications or partnerships. Real testimonials and project photos will be added only when available from actual clients.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== DEMO & CONSULTATION CTA ========== -->
+  <section id="consultation" class="section-pad">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Explore What Is Possible?</h2>
+      <p class="text-slate-300 text-lg mb-8 max-w-2xl mx-auto">
+        Book a free consultation or request a demonstration. We will discuss your rooms, priorities and timeline — no obligation.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a data-wa="demo" class="btn-primary text-base">
+          Book a Demo on WhatsApp
+        </a>
+        <a href="#enquiry" class="btn-secondary text-base">
+          Fill Enquiry Form
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICE LOCATIONS ========== -->
+  <section class="py-12 border-y border-navy-800/50 bg-navy-900/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-xl font-semibold text-white mb-4">Service Locations</h2>
+      <p class="text-slate-400 mb-2" data-config="serviceAreas">Madurai • Coimbatore • Chennai • Tirunelveli • Salem</p>
+      <p class="text-sm text-slate-500">Primary focus: Madurai, Coimbatore and Chennai. Other Tamil Nadu cities considered on project basis.</p>
+    </div>
+  </section>
+
+  <!-- ========== FAQ ========== -->
+  <section id="faq" class="section-pad">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-3">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="space-y-4">
+        <details class="faq-item card p-5 group">
+          <summary class="flex justify-between items-center font-medium text-white">
+            Can existing switches and wiring support smart devices?
+            <svg class="faq-chevron w-5 h-5 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+            Many homes can use modular smart switches if the switchboard has adequate depth and a neutral wire is available. Some solutions work without neutral. A site survey is the only reliable way to confirm feasibility for your specific boards and loads.
+          </p>
+        </details>
+
+        <details class="faq-item card p-5 group">
+          <summary class="flex justify-between items-center font-medium text-white">
+            Do I need internet for everything to work?
+            <svg class="faq-chevron w-5 h-5 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+            Local control (touch switches, physical buttons) usually works without internet. Remote access, notifications and cloud-based scenes require a stable internet connection. We design so essential functions remain usable offline where the hardware allows.
+          </p>
+        </details>
+
+        <details class="faq-item card p-5 group">
+          <summary class="flex justify-between items-center font-medium text-white">
+            Is home automation only for new constructions?
+            <svg class="faq-chevron w-5 h-5 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+            No. Retrofits are common. Success depends on existing electrical conditions. New construction simply gives more flexibility for clean cabling and future expansion.
+          </p>
+        </details>
+
+        <details class="faq-item card p-5 group">
+          <summary class="flex justify-between items-center font-medium text-white">
+            Which brands do you support?
+            <svg class="faq-chevron w-5 h-5 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+            We work with selected reliable brands and modules that we can source and support. We do not claim compatibility with every device on the market. During consultation we recommend options suited to your requirements and budget.
+          </p>
+        </details>
+
+        <details class="faq-item card p-5 group">
+          <summary class="flex justify-between items-center font-medium text-white">
+            How long does a typical installation take?
+            <svg class="faq-chevron w-5 h-5 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+            A single-room or few-switch upgrade may be completed in a day or two. Whole-home projects with curtains, multiple scenes and security can take several days to a couple of weeks depending on scope and site readiness. Timeline is confirmed after survey.
+          </p>
+        </details>
+
+        <details class="faq-item card p-5 group">
+          <summary class="flex justify-between items-center font-medium text-white">
+            What about warranty and after-sales support?
+            <svg class="faq-chevron w-5 h-5 text-slate-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+            Product warranties follow manufacturer terms. Installation workmanship support is provided as defined in the proposal. Specific warranty and support policy details are shared in writing before you approve the project. Placeholders only until finalised for your business.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ENQUIRY FORM ========== -->
+  <section id="enquiry" class="section-pad bg-navy-900/50">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-3">Request a Consultation</h2>
+        <p class="text-slate-400">Fill in the form and we will get back to you. For fastest response, also message us on WhatsApp.</p>
+      </div>
+
+      <form id="enquiry-form" class="card p-6 sm:p-8 space-y-5" novalidate>
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label class="form-label" for="fullName">Full Name *</label>
+            <input type="text" id="fullName" name="fullName" required class="form-input" placeholder="Your full name" />
+          </div>
+          <div>
+            <label class="form-label" for="whatsapp">WhatsApp Number *</label>
+            <input type="tel" id="whatsapp" name="whatsapp" required class="form-input" placeholder="10-digit mobile number" />
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label class="form-label" for="customerType">I am a *</label>
+            <select id="customerType" name="customerType" required class="form-input">
+              <option value="">Select...</option>
+              <option value="Homeowner">Homeowner</option>
+              <option value="Villa Owner">Villa Owner</option>
+              <option value="Interior Designer">Interior Designer</option>
+              <option value="Architect">Architect</option>
+              <option value="Builder">Builder</option>
+              <option value="Electrician">Electrician / Contractor</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div>
+            <label class="form-label" for="projectLocation">Project Location *</label>
+            <input type="text" id="projectLocation" name="projectLocation" required class="form-input" placeholder="e.g. Madurai, Anna Nagar" />
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label class="form-label" for="projectType">Project Type *</label>
+            <select id="projectType" name="projectType" required class="form-input">
+              <option value="">Select...</option>
+              <option value="New Construction">New Construction</option>
+              <option value="Existing Home">Existing Home</option>
+              <option value="Renovation">Renovation</option>
+              <option value="Commercial">Commercial</option>
+            </select>
+          </div>
+          <div>
+            <label class="form-label" for="projectStage">Project Stage</label>
+            <select id="projectStage" name="projectStage" class="form-input">
+              <option value="">Select...</option>
+              <option value="Planning">Planning</option>
+              <option value="Electrical Work">Electrical Work</option>
+              <option value="Interior Work">Interior Work</option>
+              <option value="Completed Home">Completed Home</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="form-label">Interested Services (select all that apply)</label>
+          <div class="grid grid-cols-2 gap-2 mt-1">
+            <label class="flex items-center gap-2 text-sm text-slate-300"><input type="checkbox" name="services" value="Smart Lighting" class="rounded border-navy-600 text-gold-500 focus:ring-gold-500" /> Smart Lighting</label>
+            <label class="flex items-center gap-2 text-sm text-slate-300"><input type="checkbox" name="services" value="Smart Switches" class="rounded border-navy-600 text-gold-500 focus:ring-gold-500" /> Smart Switches / Fans</label>
+            <label class="flex items-center gap-2 text-sm text-slate-300"><input type="checkbox" name="services" value="Motorized Curtains" class="rounded border-navy-600 text-gold-500 focus:ring-gold-500" /> Motorized Curtains</label>
+            <label class="flex items-center gap-2 text-sm text-slate-300"><input type="checkbox" name="services" value="Smart Locks" class="rounded border-navy-600 text-gold-500 focus:ring-gold-500" /> Smart Locks / Doorbell</label>
+            <label class="flex items-center gap-2 text-sm text-slate-300"><input type="checkbox" name="services" value="Security Sensors" class="rounded border-navy-600 text-gold-500 focus:ring-gold-500" /> Security Sensors</label>
+            <label class="flex items-center gap-2 text-sm text-slate-300"><input type="checkbox" name="services" value="AC Control" class="rounded border-navy-600 text-gold-500 focus:ring-gold-500" /> AC Control</label>
+            <label class="flex items-center gap-2 text-sm text-slate-300"><input type="checkbox" name="services" value="Smart Scenes" class="rounded border-navy-600 text-gold-500 focus:ring-gold-500" /> Smart Scenes</label>
+            <label class="flex items-center gap-2 text-sm text-slate-300"><input type="checkbox" name="services" value="Energy Monitoring" class="rounded border-navy-600 text-gold-500 focus:ring-gold-500" /> Energy Monitoring</label>
+            <label class="flex items-center gap-2 text-sm text-slate-300"><input type="checkbox" name="services" value="Custom Integration" class="rounded border-navy-600 text-gold-500 focus:ring-gold-500" /> Custom Integration</label>
+            <label class="flex items-center gap-2 text-sm text-slate-300"><input type="checkbox" name="services" value="Support / Maintenance" class="rounded border-navy-600 text-gold-500 focus:ring-gold-500" /> Support / Maintenance</label>
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label class="form-label" for="budget">Estimated Budget (optional)</label>
+            <select id="budget" name="budget" class="form-input">
+              <option value="">Prefer not to say</option>
+              <option value="Under 50k">Under ₹50,000</option>
+              <option value="50k-1L">₹50,000 – 1 Lakh</option>
+              <option value="1L-3L">₹1 – 3 Lakhs</option>
+              <option value="3L-5L">₹3 – 5 Lakhs</option>
+              <option value="Above 5L">Above ₹5 Lakhs</option>
+            </select>
+          </div>
+          <div>
+            <label class="form-label" for="preferredDate">Preferred Consultation Date (optional)</label>
+            <input type="date" id="preferredDate" name="preferredDate" class="form-input" />
+          </div>
+        </div>
+
+        <div>
+          <label class="form-label" for="requirements">Additional Requirements (optional)</label>
+          <textarea id="requirements" name="requirements" rows="3" class="form-input" placeholder="Rooms, special needs, timeline notes..."></textarea>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <input type="checkbox" id="consent" name="consent" required class="mt-1 rounded border-navy-600 text-gold-500 focus:ring-gold-500" />
+          <label for="consent" class="text-sm text-slate-400">
+            I consent to being contacted by <span data-config="companyName">Aether Homes</span> via WhatsApp, phone or email regarding this enquiry. My details will not be shared publicly or sold.
+          </label>
+        </div>
+
+        <div id="form-error" class="hidden text-sm text-red-400 bg-red-500/10 border border-red-500/30 rounded-lg px-4 py-3"></div>
+
+        <button type="submit" class="btn-primary w-full justify-center text-base">
+          Submit Enquiry
+        </button>
+      </form>
+
+      <!-- Success state -->
+      <div id="form-success" class="hidden card p-8 text-center">
+        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-green-500/15 border border-green-500/30 flex items-center justify-center">
+          <svg class="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        </div>
+        <h3 class="text-xl font-semibold text-white mb-2">Thank You!</h3>
+        <p class="text-slate-300 mb-4" data-storage-note>Your enquiry has been noted.</p>
+        <a data-wa="general" class="btn-primary inline-flex">Continue on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section id="contact" class="section-pad border-t border-navy-800/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h2 class="text-3xl font-bold text-white mb-4">Get in Touch</h2>
+          <p class="text-slate-400 mb-6 leading-relaxed">
+            Prefer to talk directly? Reach us on WhatsApp or email. We respond during business hours and schedule site visits across our service areas.
+          </p>
+          <ul class="space-y-4 text-slate-300">
+            <li class="flex items-center gap-3">
+              <span class="w-10 h-10 rounded-lg bg-navy-800 flex items-center justify-center text-gold-400">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.247-.1-.428-.149-.61.15-.181.297-.703.966-.86 1.165-.157.2-.314.223-.583.075-.269-.149-1.137-.42-2.166-1.34-.801-.713-1.341-1.593-1.498-1.862-.157-.269-.017-.414.118-.548.121-.12.269-.314.403-.472.134-.157.179-.269.268-.448.09-.179.045-.336-.022-.485-.067-.149-.61-1.47-.836-2.013-.22-.53-.443-.458-.61-.467-.157-.009-.336-.011-.515-.011-.179 0-.47.067-.716.336-.246.268-.936.914-.936 2.23 0 1.315.958 2.585 1.092 2.763.134.179 1.88 2.87 4.554 4.025.636.275 1.133.44 1.52.563.639.204 1.22.175 1.68.106.512-.076 1.758-.718 2.006-1.412.248-.694.248-1.289.173-1.412-.074-.123-.269-.198-.566-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.12.55 4.113 1.513 5.85L.057 23.5a.75.75 0 00.92.92l5.65-1.456A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.72 9.72 0 01-4.95-1.35l-.355-.21-3.72.96.99-3.63-.23-.37A9.72 9.72 0 012.25 12 9.75 9.75 0 0112 2.25 9.75 9.75 0 0121.75 12 9.75 9.75 0 0112 21.75z"/></svg>
+              </span>
+              <div>
+                <p class="text-xs text-slate-500">WhatsApp</p>
+                <a data-wa="general" class="hover:text-gold-400 transition" data-config="phoneDisplay">+91 XXXXX XXXXX</a>
+              </div>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-10 h-10 rounded-lg bg-navy-800 flex items-center justify-center text-gold-400">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </span>
+              <div>
+                <p class="text-xs text-slate-500">Email</p>
+                <a href="mailto:hello@yourdomain.com" class="hover:text-gold-400 transition" data-config="email">hello@yourdomain.com</a>
+              </div>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-10 h-10 rounded-lg bg-navy-800 flex items-center justify-center text-gold-400">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </span>
+              <div>
+                <p class="text-xs text-slate-500">Service Areas</p>
+                <p data-config="address">Madurai • Coimbatore • Chennai, Tamil Nadu</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card p-6">
+          <h3 class="font-semibold text-white mb-3">Quick WhatsApp Options</h3>
+          <div class="space-y-3">
+            <a data-wa="general" class="block w-full text-left px-4 py-3 rounded-lg bg-navy-800/80 hover:bg-navy-700 border border-navy-700 text-sm text-slate-200 transition">General enquiry</a>
+            <a data-wa="newHome" class="block w-full text-left px-4 py-3 rounded-lg bg-navy-800/80 hover:bg-navy-700 border border-navy-700 text-sm text-slate-200 transition">New home project</a>
+            <a data-wa="existing" class="block w-full text-left px-4 py-3 rounded-lg bg-navy-800/80 hover:bg-navy-700 border border-navy-700 text-sm text-slate-200 transition">Existing home retrofit</a>
+            <a data-wa="designer" class="block w-full text-left px-4 py-3 rounded-lg bg-navy-800/80 hover:bg-navy-700 border border-navy-700 text-sm text-slate-200 transition">Interior designer partnership</a>
+            <a data-wa="demo" class="block w-full text-left px-4 py-3 rounded-lg bg-navy-800/80 hover:bg-navy-700 border border-navy-700 text-sm text-slate-200 transition">Book a demonstration</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="border-t border-navy-800 bg-navy-950 py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-gold-500 to-gold-600 flex items-center justify-center text-navy-950 font-bold text-xs">AH</div>
+          <span class="font-bold text-white" data-config="logoText">AETHER</span>
+          <span class="text-slate-500 text-sm ml-2" data-config="tagline">Smart Living, Simply Delivered</span>
+        </div>
+        <nav class="flex flex-wrap justify-center gap-6 text-sm text-slate-400">
+          <a href="#services" class="hover:text-gold-400 transition">Services</a>
+          <a href="#process" class="hover:text-gold-400 transition">Process</a>
+          <a href="#faq" class="hover:text-gold-400 transition">FAQ</a>
+          <a href="#contact" class="hover:text-gold-400 transition">Contact</a>
+        </nav>
+      </div>
+      <div class="mt-8 pt-6 border-t border-navy-800 text-center text-xs text-slate-500">
+        <p>© <span id="year"></span> <span data-config="companyName">Aether Homes</span>. All rights reserved.</p>
+        <p class="mt-1">Home Automation in Madurai • Coimbatore • Chennai | Smart Lighting & Curtain Automation</p>
+        <p class="mt-2 text-slate-600">Placeholders: Update company name, WhatsApp number, email and domain in <code class="text-slate-500">config.js</code> before launch.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a data-wa="general" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.247-.1-.428-.149-.61.15-.181.297-.703.966-.86 1.165-.157.2-.314.223-.583.075-.269-.149-1.137-.42-2.166-1.34-.801-.713-1.341-1.593-1.498-1.862-.157-.269-.017-.414.118-.548.121-.12.269-.314.403-.472.134-.157.179-.269.268-.448.09-.179.045-.336-.022-.485-.067-.149-.61-1.47-.836-2.013-.22-.53-.443-.458-.61-.467-.157-.009-.336-.011-.515-.011-.179 0-.47.067-.716.336-.246.268-.936.914-.936 2.23 0 1.315.958 2.585 1.092 2.763.134.179 1.88 2.87 4.554 4.025.636.275 1.133.44 1.52.563.639.204 1.22.175 1.68.106.512-.076 1.758-.718 2.006-1.412.248-.694.248-1.289.173-1.412-.074-.123-.269-.198-.566-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.12.55 4.113 1.513 5.85L.057 23.5a.75.75 0 00.92.92l5.65-1.456A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.72 9.72 0 01-4.95-1.35l-.355-.21-3.72.96.99-3.63-.23-.37A9.72 9.72 0 012.25 12 9.75 9.75 0 0112 2.25 9.75 9.75 0 0121.75 12 9.75 9.75 0 0112 21.75z"/></svg>
+  </a>
+
+  <script src="config.js"></script>
+  <script src="js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
