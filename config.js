@@ -1,0 +1,41 @@
+/**
+ * ============================================================
+ *  CONFIGURATION — UPDATE THESE VALUES BEFORE GOING LIVE
+ * ============================================================
+ *  Replace every placeholder below with real business details.
+ *  After updating, the site will use the new values everywhere.
+ */
+
+window.SITE_CONFIG = {
+  // --- Brand ---
+  companyName: "Aether Homes",                     // e.g. "Aether Homes" or your real name
+  tagline: "Smart Living, Simply Delivered",
+  logoText: "AETHER",                              // short text logo (or replace with image later)
+
+  // --- Contact (CRITICAL for lead gen) ---
+  whatsappNumber: "91XXXXXXXXXX",                  // Full international format without + or spaces, e.g. 919876543210
+  email: "hello@yourdomain.com",
+  phoneDisplay: "+91 XXXXX XXXXX",                 // Human-readable phone
+  address: "Madurai • Coimbatore • Chennai, Tamil Nadu",
+
+  // --- Service Areas ---
+  serviceAreas: ["Madurai", "Coimbatore", "Chennai", "Tirunelveli", "Salem"],
+
+  // --- Domain & SEO ---
+  siteUrl: "https://www.yourdomain.com",           // Canonical base URL
+  defaultTitle: "Home Automation in Madurai, Coimbatore & Chennai | Smart Home Solutions",
+  defaultDescription: "Professional home automation installation for modern homes, villas & apartments in Tamil Nadu. Smart lighting, curtains, security & more. Free consultation.",
+
+  // --- Analytics (leave empty until configured) ---
+  googleAnalyticsId: "",                           // e.g. "G-XXXXXXXXXX"
+  googleTagManagerId: "",                          // e.g. "GTM-XXXXXXX"
+
+  // --- Form backend (optional) ---
+  // Set to a Formspree, Netlify Forms, or your own endpoint.
+  // Leave empty → form shows success message only (no real save).
+  formEndpoint: "",                                // e.g. "https://formspree.io/f/xxxxxx"
+
+  // --- Social / other ---
+  instagram: "",
+  facebook: "",
+};
