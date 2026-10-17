@@ -109,82 +109,185 @@
   }
 
   // ---------- Enquiry form ----------
-  function initForm() {
-    const form = document.getElementById('enquiry-form');
-    if (!form) return;
+  // function initForm() {
+  //   const form = document.getElementById('enquiry-form');
+  //   if (!form) return;
 
-    const successBox = document.getElementById('form-success');
-    const errorBox = document.getElementById('form-error');
+  //   const successBox = document.getElementById('form-success');
+  //   const errorBox = document.getElementById('form-error');
 
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      if (errorBox) errorBox.classList.add('hidden');
+  //   form.addEventListener('submit', async (e) => {
+  //     e.preventDefault();
+  //     if (errorBox) errorBox.classList.add('hidden');
 
-      // Basic validation
-      const name = form.querySelector('[name="fullName"]').value.trim();
-      const whatsapp = form.querySelector('[name="whatsapp"]').value.trim();
-      const customerType = form.querySelector('[name="customerType"]').value;
-      const location = form.querySelector('[name="projectLocation"]').value.trim();
-      const projectType = form.querySelector('[name="projectType"]').value;
-      const consent = form.querySelector('[name="consent"]').checked;
+  //     // Basic validation
+  //     const name = form.querySelector('[name="fullName"]').value.trim();
+  //     const whatsapp = form.querySelector('[name="whatsapp"]').value.trim();
+  //     const customerType = form.querySelector('[name="customerType"]').value;
+  //     const location = form.querySelector('[name="projectLocation"]').value.trim();
+  //     const projectType = form.querySelector('[name="projectType"]').value;
+  //     const consent = form.querySelector('[name="consent"]').checked;
 
-      if (!name || !whatsapp || !customerType || !location || !projectType || !consent) {
-        if (errorBox) {
-          errorBox.textContent = 'Please fill all required fields and accept the consent checkbox.';
-          errorBox.classList.remove('hidden');
-        }
-        return;
+  //     if (!name || !whatsapp || !customerType || !location || !projectType || !consent) {
+  //       if (errorBox) {
+  //         errorBox.textContent = 'Please fill all required fields and accept the consent checkbox.';
+  //         errorBox.classList.remove('hidden');
+  //       }
+  //       return;
+  //     }
+
+  //     // Collect multi-select services
+  //     const services = Array.from(form.querySelectorAll('[name="services"]:checked')).map(c => c.value);
+
+  //     const payload = {
+  //       fullName: name,
+  //       whatsapp,
+  //       customerType,
+  //       projectLocation: location,
+  //       projectType,
+  //       services,
+  //       projectStage: form.querySelector('[name="projectStage"]').value || '',
+  //       budget: form.querySelector('[name="budget"]').value || '',
+  //       preferredDate: form.querySelector('[name="preferredDate"]').value || '',
+  //       requirements: form.querySelector('[name="requirements"]').value || '',
+  //       source: 'website_enquiry_form',
+  //       timestamp: new Date().toISOString(),
+  //     };
+
+  //     // Submit if endpoint configured
+  //     let saved = false;
+  //     if (cfg.formEndpoint) {
+  //       try {
+  //         const res = await fetch(cfg.formEndpoint, {
+  //           method: 'POST',
+  //           headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+  //           body: JSON.stringify(payload),
+  //         });
+  //         saved = res.ok;
+  //       } catch (err) {
+  //         console.warn('Form endpoint error:', err);
+  //       }
+  //     }
+
+  //     // Always show success UI (honest about storage)
+  //     form.classList.add('hidden');
+  //     if (successBox) {
+  //       successBox.classList.remove('hidden');
+  //       const note = successBox.querySelector('[data-storage-note]');
+  //       if (note) {
+  //         note.textContent = saved
+  //           ? 'Your enquiry has been received. Our team will contact you shortly.'
+  //           : 'Thank you! Please also message us on WhatsApp so we can respond faster. (Form storage is not yet configured — contact via WhatsApp for guaranteed follow-up.)';
+  //       }
+  //     }
+
+  //     trackEvent('form_submit', { customerType, projectType, services_count: services.length });
+  //   });
+  // }
+function initForm() {
+  const form = document.getElementById('enquiry-form');
+  if (!form) return;
+
+  const successBox = document.getElementById('form-success');
+  const errorBox = document.getElementById('form-error');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (errorBox) errorBox.classList.add('hidden');
+
+    // Basic validation
+    const name = form.querySelector('[name="fullName"]').value.trim();
+    const whatsapp = form.querySelector('[name="whatsapp"]').value.trim();
+    const customerType = form.querySelector('[name="customerType"]').value;
+    const location = form.querySelector('[name="projectLocation"]').value.trim();
+    const projectType = form.querySelector('[name="projectType"]').value;
+    const consent = form.querySelector('[name="consent"]').checked;
+
+    if (!name || !whatsapp || !customerType || !location || !projectType || !consent) {
+      if (errorBox) {
+        errorBox.textContent = 'Please fill all required fields and accept the consent checkbox.';
+        errorBox.classList.remove('hidden');
       }
+      return;
+    }
 
-      // Collect multi-select services
-      const services = Array.from(form.querySelectorAll('[name="services"]:checked')).map(c => c.value);
+    // Collect multi-select services
+    const services = Array.from(form.querySelectorAll('[name="services"]:checked')).map(c => c.value);
 
-      const payload = {
-        fullName: name,
-        whatsapp,
-        customerType,
-        projectLocation: location,
-        projectType,
-        services,
-        projectStage: form.querySelector('[name="projectStage"]').value || '',
-        budget: form.querySelector('[name="budget"]').value || '',
-        preferredDate: form.querySelector('[name="preferredDate"]').value || '',
-        requirements: form.querySelector('[name="requirements"]').value || '',
-        source: 'website_enquiry_form',
-        timestamp: new Date().toISOString(),
-      };
+    const projectStage = form.querySelector('[name="projectStage"]')?.value || '';
+    const budget = form.querySelector('[name="budget"]')?.value || '';
+    const preferredDate = form.querySelector('[name="preferredDate"]')?.value || '';
+    const requirements = form.querySelector('[name="requirements"]')?.value || '';
 
-      // Submit if endpoint configured
-      let saved = false;
-      if (cfg.formEndpoint) {
-        try {
-          const res = await fetch(cfg.formEndpoint, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-            body: JSON.stringify(payload),
-          });
-          saved = res.ok;
-        } catch (err) {
-          console.warn('Form endpoint error:', err);
-        }
+    const payload = {
+      fullName: name,
+      whatsapp,
+      customerType,
+      projectLocation: location,
+      projectType,
+      services,
+      projectStage,
+      budget,
+      preferredDate,
+      requirements,
+      source: 'website_enquiry_form',
+      timestamp: new Date().toISOString(),
+    };
+
+    // Submit if endpoint configured
+    let saved = false;
+    if (cfg.formEndpoint) {
+      try {
+        const res = await fetch(cfg.formEndpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        saved = res.ok;
+      } catch (err) {
+        console.warn('Form endpoint error:', err);
       }
+    }
 
-      // Always show success UI (honest about storage)
-      form.classList.add('hidden');
-      if (successBox) {
-        successBox.classList.remove('hidden');
-        const note = successBox.querySelector('[data-storage-note]');
-        if (note) {
-          note.textContent = saved
-            ? 'Your enquiry has been received. Our team will contact you shortly.'
-            : 'Thank you! Please also message us on WhatsApp so we can respond faster. (Form storage is not yet configured — contact via WhatsApp for guaranteed follow-up.)';
-        }
+    // ---------- Build WhatsApp message with form details ----------
+    const servicesText = services.length > 0 ? services.join(', ') : 'Not specified';
+    const message = 
+`*New Enquiry - MV Home Automation*
+
+*Name:* ${name}
+*WhatsApp:* ${whatsapp}
+*I am a:* ${customerType}
+*Location:* ${location}
+*Project Type:* ${projectType}
+*Services Interested:* ${servicesText}
+*Project Stage:* ${projectStage || 'Not specified'}
+*Budget:* ${budget || 'Not specified'}
+*Preferred Date:* ${preferredDate || 'Not specified'}
+*Requirements:* ${requirements || 'None'}
+
+Please contact me.`;
+
+    // Update the "Continue on WhatsApp" button with dynamic message
+    const waButton = successBox?.querySelector('a[data-wa], a.btn-primary');
+    if (waButton) {
+      waButton.href = buildWhatsAppUrl(message);
+    }
+
+    // Always show success UI
+    form.classList.add('hidden');
+    if (successBox) {
+      successBox.classList.remove('hidden');
+      const note = successBox.querySelector('[data-storage-note]');
+      if (note) {
+        note.textContent = saved
+          ? 'Your enquiry has been received. Our team will contact you shortly.'
+          : 'Thank you! Please also message us on WhatsApp so we can respond faster.';
       }
+    }
 
-      trackEvent('form_submit', { customerType, projectType, services_count: services.length });
-    });
-  }
-
+    trackEvent('form_submit', { customerType, projectType, services_count: services.length });
+  });
+}
   // ---------- Analytics placeholder ----------
   function trackEvent(name, params = {}) {
     // Google Analytics 4
