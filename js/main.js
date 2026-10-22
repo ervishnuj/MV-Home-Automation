@@ -45,10 +45,12 @@
   function applyConfig() {
     // Company name
     document.querySelectorAll('[data-config="companyName"]').forEach(el => {
-      el.textContent = cfg.companyName || 'Aether Homes';
+      el.textContent =cfg.companyName || 'MV Home Automation';
+        // cfg.companyName || 'Aether Homes';
     });
     document.querySelectorAll('[data-config="logoText"]').forEach(el => {
-      el.textContent = cfg.logoText || 'AETHER';
+      el.textContent = cfg.logoText || 'MV Home Automation'
+        // cfg.logoText || 'AETHER';
     });
     document.querySelectorAll('[data-config="email"]').forEach(el => {
       el.textContent = cfg.email || 'hello@yourdomain.com';
@@ -70,11 +72,51 @@
       el.textContent = areas.join(' • ');
     });
 
-    // Update page title if needed
+  //   // Update page title if needed
+  //   if (cfg.defaultTitle) {
+  //     document.title = cfg.defaultTitle;
+  //   }
+  // }
+    
+    // Update page title
     if (cfg.defaultTitle) {
       document.title = cfg.defaultTitle;
     }
-  }
+
+    // Update meta description
+    if (cfg.defaultDescription) {
+      let description = document.querySelector(
+        'meta[name="description"]'
+      );
+
+      if (!description) {
+        description = document.createElement('meta');
+        description.setAttribute('name', 'description');
+        document.head.appendChild(description);
+      }
+
+      description.setAttribute(
+        'content',
+        cfg.defaultDescription
+      );
+    }
+
+    // Update canonical URL for the homepage
+    if (cfg.siteUrl) {
+      let canonical = document.querySelector(
+        'link[rel="canonical"]'
+      );
+
+      if (!canonical) {
+        canonical = document.createElement('link');
+        canonical.setAttribute('rel', 'canonical');
+        document.head.appendChild(canonical);
+      }
+
+      const baseUrl = cfg.siteUrl.replace(/\/+$/, '');
+      canonical.setAttribute('href', baseUrl + '/');
+    }
+
 
   // ---------- WhatsApp links ----------
   function wireWhatsAppLinks() {
