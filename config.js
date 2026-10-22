@@ -21,11 +21,19 @@ window.SITE_CONFIG = {
   // --- Service Areas ---
   serviceAreas: ["Madurai", "Coimbatore", "Chennai", "Tirunelveli", "Salem"],
 
-  // --- Domain & SEO ---
-  siteUrl: "https://www.yourdomain.com",           // Canonical base URL
-  defaultTitle: "Home Automation in Madurai, Coimbatore & Chennai | Smart Home Solutions",
-  defaultDescription: "Professional home automation installation for modern homes, villas & apartments in Tamil Nadu. Smart lighting, curtains, security & more. Free consultation.",
+  // // --- Domain & SEO ---
+  // siteUrl: "https://www.yourdomain.com",           // Canonical base URL
+  // defaultTitle: "Home Automation in Madurai, Coimbatore & Chennai | Smart Home Solutions",
+  // defaultDescription: "Professional home automation installation for modern homes, villas & apartments in Tamil Nadu. Smart lighting, curtains, security & more. Free consultation.",
 
+
+  
+  // --- Domain & SEO ---
+  siteUrl: "https://mv-home-automation.vercel.app",
+  defaultTitle: "Home Automation in Madurai | MV Home Automation",
+  defaultDescription: "Discover home automation solutions in Madurai, Coimbatore and Chennai. Explore smart lighting, smart switches, fan control, motorized curtains and compatible home security solutions.",
+
+  
   // --- Analytics (leave empty until configured) ---
   googleAnalyticsId: "",                           // e.g. "G-XXXXXXXXXX"
   googleTagManagerId: "",                          // e.g. "GTM-XXXXXXX"
