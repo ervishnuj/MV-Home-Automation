@@ -42,52 +42,132 @@
   };
 
   // ---------- Apply config to DOM ----------
+  // function applyConfig() {
+  //   // Company name
+  //   document.querySelectorAll('[data-config="companyName"]').forEach(el => {
+  //     el.textContent =cfg.companyName || 'MV Home Automation';
+  //       // cfg.companyName || 'Aether Homes';
+  //   });
+  //   document.querySelectorAll('[data-config="logoText"]').forEach(el => {
+  //     el.textContent = cfg.logoText || 'MV Home Automation'
+  //       // cfg.logoText || 'AETHER';
+  //   });
+  //   document.querySelectorAll('[data-config="email"]').forEach(el => {
+  //     el.textContent = cfg.email || 'hello@yourdomain.com';
+  //     if (el.tagName === 'A') el.href = `mailto:${cfg.email || 'hello@yourdomain.com'}`;
+  //   });
+  //   document.querySelectorAll('[data-config="phoneDisplay"]').forEach(el => {
+  //     el.textContent = cfg.phoneDisplay || '+91 XXXXX XXXXX';
+  //   });
+  //   document.querySelectorAll('[data-config="address"]').forEach(el => {
+  //     el.textContent = cfg.address || 'Madurai • Coimbatore • Chennai, Tamil Nadu';
+  //   });
+  //   document.querySelectorAll('[data-config="tagline"]').forEach(el => {
+  //     el.textContent = cfg.tagline || 'Smart Living, Simply Delivered';
+  //   });
+
+  //   // Service areas list
+  //   const areas = cfg.serviceAreas || ['Madurai', 'Coimbatore', 'Chennai'];
+  //   document.querySelectorAll('[data-config="serviceAreas"]').forEach(el => {
+  //     el.textContent = areas.join(' • ');
+  //   });
+
+  // //   // Update page title if needed
+  // //   if (cfg.defaultTitle) {
+  // //     document.title = cfg.defaultTitle;
+  // //   }
+  // // }
+    
+  //   // Update page title
+  //   if (cfg.defaultTitle) {
+  //     document.title = cfg.defaultTitle;
+  //   }
+
+  //   // Update meta description
+  //   if (cfg.defaultDescription) {
+  //     let description = document.querySelector(
+  //       'meta[name="description"]'
+  //     );
+
+  //     if (!description) {
+  //       description = document.createElement('meta');
+  //       description.setAttribute('name', 'description');
+  //       document.head.appendChild(description);
+  //     }
+
+  //     description.setAttribute(
+  //       'content',
+  //       cfg.defaultDescription
+  //     );
+  //   }
+
+  //   // Update canonical URL for the homepage
+  //   if (cfg.siteUrl) {
+  //     let canonical = document.querySelector(
+  //       'link[rel="canonical"]'
+  //     );
+
+  //     if (!canonical) {
+  //       canonical = document.createElement('link');
+  //       canonical.setAttribute('rel', 'canonical');
+  //       document.head.appendChild(canonical);
+  //     }
+
+  //     const baseUrl = cfg.siteUrl.replace(/\/+$/, '');
+  //     canonical.setAttribute('href', baseUrl + '/');
+  //   }
+
+
+
+    // ---------- Apply config to DOM ----------
   function applyConfig() {
     // Company name
     document.querySelectorAll('[data-config="companyName"]').forEach(el => {
-      el.textContent =cfg.companyName || 'MV Home Automation';
-        // cfg.companyName || 'Aether Homes';
+      el.textContent = cfg.companyName || 'MV Home Automation';
     });
+
+    // Logo text
     document.querySelectorAll('[data-config="logoText"]').forEach(el => {
-      el.textContent = cfg.logoText || 'MV Home Automation'
-        // cfg.logoText || 'AETHER';
+      el.textContent = cfg.logoText || 'MV Home Automation';
     });
+
+    // Email
     document.querySelectorAll('[data-config="email"]').forEach(el => {
-      el.textContent = cfg.email || 'hello@yourdomain.com';
-      if (el.tagName === 'A') el.href = `mailto:${cfg.email || 'hello@yourdomain.com'}`;
+      el.textContent = cfg.email || '';
+      if (el.tagName === 'A') {
+        el.href = cfg.email ? `mailto:${cfg.email}` : '#';
+      }
     });
+
+    // Phone
     document.querySelectorAll('[data-config="phoneDisplay"]').forEach(el => {
-      el.textContent = cfg.phoneDisplay || '+91 XXXXX XXXXX';
+      el.textContent = cfg.phoneDisplay || '';
     });
+
+    // Address
     document.querySelectorAll('[data-config="address"]').forEach(el => {
-      el.textContent = cfg.address || 'Madurai • Coimbatore • Chennai, Tamil Nadu';
+      el.textContent = cfg.address || 'Madurai, Tamil Nadu';
     });
+
+    // Tagline
     document.querySelectorAll('[data-config="tagline"]').forEach(el => {
       el.textContent = cfg.tagline || 'Smart Living, Simply Delivered';
     });
 
-    // Service areas list
+    // Service areas
     const areas = cfg.serviceAreas || ['Madurai', 'Coimbatore', 'Chennai'];
     document.querySelectorAll('[data-config="serviceAreas"]').forEach(el => {
       el.textContent = areas.join(' • ');
     });
 
-  //   // Update page title if needed
-  //   if (cfg.defaultTitle) {
-  //     document.title = cfg.defaultTitle;
-  //   }
-  // }
-    
-    // Update page title
+    // Page title
     if (cfg.defaultTitle) {
       document.title = cfg.defaultTitle;
     }
 
-    // Update meta description
+    // Meta description
     if (cfg.defaultDescription) {
-      let description = document.querySelector(
-        'meta[name="description"]'
-      );
+      let description = document.querySelector('meta[name="description"]');
 
       if (!description) {
         description = document.createElement('meta');
@@ -95,17 +175,12 @@
         document.head.appendChild(description);
       }
 
-      description.setAttribute(
-        'content',
-        cfg.defaultDescription
-      );
+      description.setAttribute('content', cfg.defaultDescription);
     }
 
-    // Update canonical URL for the homepage
+    // Canonical URL
     if (cfg.siteUrl) {
-      let canonical = document.querySelector(
-        'link[rel="canonical"]'
-      );
+      let canonical = document.querySelector('link[rel="canonical"]');
 
       if (!canonical) {
         canonical = document.createElement('link');
@@ -116,7 +191,10 @@
       const baseUrl = cfg.siteUrl.replace(/\/+$/, '');
       canonical.setAttribute('href', baseUrl + '/');
     }
+  }
 
+
+  
 
   // ---------- WhatsApp links ----------
   function wireWhatsAppLinks() {
