@@ -1,4 +1,4 @@
-# Aether Homes — Home Automation Lead-Generation Website
+# MV Home Automation — Home Automation Lead-Generation Website
 
 Professional, conversion-focused website for a home automation business targeting **Madurai, Coimbatore and Chennai** (Tamil Nadu).
 
