@@ -1,0 +1,10 @@
+
+{
+  "name": "MV Home Automation",
+  "short_name": "MV Home",
+  "description": "Smart Home Automation Solutions in Tamil Nadu",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0f766e"
+}
