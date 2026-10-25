@@ -6,4 +6,17 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  
+<url>
+  <loc>https://mv-home-automation.vercel.app/home-automation-madurai.html</loc>
+</url>
+<url>
+  <loc>https://mv-home-automation.vercel.app/smart-switches.html</loc>
+</url>
+<url>
+  <loc>https://mv-home-automation.vercel.app/smart-lighting.html</loc>
+</url>
+<url>
+  <loc>https://mv-home-automation.vercel.app/motorized-curtains.html</loc>
+</url>
 </urlset>
