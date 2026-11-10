@@ -233,3 +233,46 @@ body {
   border-left: 3px solid var(--gold-500);
   padding-left: 1rem;
 }
+
+
+
+
+/* Service Areas Section */
+
+#service-areas {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#service-areas h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+#service-areas p {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  line-height: 1.7;
+}
+
+.service-area-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.service-area-links a {
+  display: inline-block;
+  padding: 12px 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: 0.2s ease;
+}
+
+.service-area-links a:hover {
+  border-color: #2563eb;
+  color: #2563eb;
+}
